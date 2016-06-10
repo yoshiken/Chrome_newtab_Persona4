@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "New tab Persona4 customize",
+  "description": "new tab をPersona4みたいな感じでかっちょよくしたいっていうね",
+  "version": "1.0",
+  "browser_action": {
+  "icons": {
+     "128": "img/icon128.png",
+     "64": "img/icon64.png",
+     "32": "img/icon32.png",
+     "16": "img/icon16.png"
+  }
+},
+  "chrome_url_overrides": {
+   "newtab": "index.html"
+  }
+}
