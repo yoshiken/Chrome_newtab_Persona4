@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body
+{
+  background-color: #333;
+}
+
+html
+{
+  height: 100%;
+  position: relative;
+}
+
+@mixin test($coler,$bottom,$height,$speed,$delay:0s) {
+  position: absolute;
+  bottom: $bottom;
+  text-align: center;
+  text-decoration: none;
+  margin-left: -8px;
+  display: block;
+  width: 100%;
+  background: $coler;
+  height: $height;
+  color: #fff;
+  animation-delay: $delay;
+  -webkit-animation: anime1 $speed ease-out;
+  animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes anime1 {
+  0% {width: 0%;}
+  100% {width: 100%;}
+}
+
+.line1{
+  @include test(#faa622,150px,15px,0.5s,0.2s);
+}
+.line2{
+  @include test(#ffe52c,140px,20px,0.4s,0.1s);
+}
+.line3{
+  @include test(#7fe6ef,130px,8px,0.6s,0.2s);
+}
+.line4{
+  @include test(#c4d70c,118px,12px,0.7s,0.3s);
+}
+.line5{
+  @include test(#c22303,116px,8px,0.8s,0.4s);
+}
+
+/*
+.line6{
+  @include test(rgb(250, 244, 167),93px,1.2s);
+}
+.line7{
+  @include test(rgb(214, 212, 0),60px,30px,1.1s);
+}
+.line8{
+  @include test(rgb(217, 144, 3),70px,10px,1s);
+}
+/*
+.line9{
+  @include test(#00f,80px);
+}
+.line10{
+  @include test(#00f,80px);
+}
+*/
