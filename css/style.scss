@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import "background_line";
+@import "menu";
+@import "upeer_right";
+
+*{
+  font-family: 'Candal', sans-serif;
+}
+
+html
+{
+  height: 100%;
+  position: relative;
+  background-color: #ff0;
+}
+
+a:link { color:#000; text-decoration:none }
+a:visited { color:#000; text-decoration:none }
+a:hover { color:#000; text-decoration:none }
+a:active { color:#000; text-decoration:none }
+
+.main{
+  display: block;
+  background-color: #eee;
+  height: 700px;
+  width: 1150px;
+  position: fixed;
+  left: 400px;
+  top: 100px;
+}

@@ -1,22 +1,5 @@
-@charset "utf-8";
-@import "background_line";
-@import "menu";
-
-*{
-  font-family: 'Candal', sans-serif;
-}
-
-html
-{
-  height: 100%;
-  position: relative;
-  background-color: #ffee55;
-}
-
 @mixin upper_right_template($size,$weight,$color){
   display: block;
-  margin-left: auto;
-  margin-top: 0px;
   width: $size;
   height: $size;
   border-width: 0 0 $weight $weight;
@@ -35,10 +18,10 @@ html
     @include upper_right_template(140px,5px,#c22303);
   }
   &3{
-    @include upper_right_template(145px,3px,#ddd);
+    @include upper_right_template(145px,6px,#ddd);
   }
   &4{
-    @include upper_right_template(146px,8px,#faa622);
+    @include upper_right_template(148px,8px,#faa622);
   }
   &5{
     @include upper_right_template(152px,15px,#ffe52c);

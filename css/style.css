@@ -120,7 +120,7 @@
   -webkit-animation: vertical_anime 1s ease-out; }
 
 .menu {
-  margin: 0 0 0 50px;
+  margin: 50px 0 0 50px;
   display: inline-block; }
 
 .menu_text {
@@ -142,18 +142,8 @@
     -webkit-transform: translateY(-10px); }
   100% {
     -webkit-transform: translateY(5px); } }
-* {
-  font-family: 'Candal', sans-serif; }
-
-html {
-  height: 100%;
-  position: relative;
-  background-color: #ffee55; }
-
 .upper_right1 {
   display: block;
-  margin-left: auto;
-  margin-top: 0px;
   width: 130px;
   height: 130px;
   border-width: 0 0 10px 10px;
@@ -164,8 +154,6 @@ html {
   right: 0px; }
 .upper_right2 {
   display: block;
-  margin-left: auto;
-  margin-top: 0px;
   width: 140px;
   height: 140px;
   border-width: 0 0 5px 5px;
@@ -176,11 +164,9 @@ html {
   right: 0px; }
 .upper_right3 {
   display: block;
-  margin-left: auto;
-  margin-top: 0px;
   width: 145px;
   height: 145px;
-  border-width: 0 0 3px 3px;
+  border-width: 0 0 6px 6px;
   border-color: #ddd;
   border-style: solid;
   border-radius: 0 0 0 145px;
@@ -188,20 +174,16 @@ html {
   right: 0px; }
 .upper_right4 {
   display: block;
-  margin-left: auto;
-  margin-top: 0px;
-  width: 146px;
-  height: 146px;
+  width: 148px;
+  height: 148px;
   border-width: 0 0 8px 8px;
   border-color: #faa622;
   border-style: solid;
-  border-radius: 0 0 0 146px;
+  border-radius: 0 0 0 148px;
   position: fixed;
   right: 0px; }
 .upper_right5 {
   display: block;
-  margin-left: auto;
-  margin-top: 0px;
   width: 152px;
   height: 152px;
   border-width: 0 0 15px 15px;
@@ -211,4 +193,37 @@ html {
   position: fixed;
   right: 0px; }
 
-/*# sourceMappingURL=main.css.map */
+* {
+  font-family: 'Candal', sans-serif; }
+
+html {
+  height: 100%;
+  position: relative;
+  background-color: #ff0; }
+
+a:link {
+  color: #000;
+  text-decoration: none; }
+
+a:visited {
+  color: #000;
+  text-decoration: none; }
+
+a:hover {
+  color: #000;
+  text-decoration: none; }
+
+a:active {
+  color: #000;
+  text-decoration: none; }
+
+.main {
+  display: block;
+  background-color: #eee;
+  height: 700px;
+  width: 1150px;
+  position: fixed;
+  left: 400px;
+  top: 100px; }
+
+/*# sourceMappingURL=style.css.map */
