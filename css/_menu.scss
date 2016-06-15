@@ -1,0 +1,23 @@
+.menu{
+  margin: 0 0 0 50px;
+  display: inline-block;
+}
+
+.menu_text{
+  font-size: 40px;
+  position: relative;
+  line-height: 50px;
+  padding: 10px;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 2px;
+}
+.menu_text:hover{
+  font-size: 60px;
+  -webkit-animation: menu_text_anime 0.1s ease-out;
+}
+
+@-webkit-keyframes menu_text_anime{
+  0% {-webkit-transform: translateY(5px);}
+  50% {-webkit-transform: translateY(-10px);}
+  100% {-webkit-transform: translateY(5px);}
+}

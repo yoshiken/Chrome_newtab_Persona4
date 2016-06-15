@@ -1,0 +1,66 @@
+@mixin background_line_template($coler,$delay,$width,$height,$left,$bottom) {
+  position: absolute;
+  display: block;
+  background: $coler;
+  animation-delay: $delay;
+  animation-fill-mode: backwards;
+  width: $width;
+  height: $height;
+  left: $left;
+  bottom: $bottom;
+}
+
+@mixin horizon($coler,$bottom,$height,$speed,$delay) {
+  @include background_line_template($coler,$delay,100%,$height,0,$bottom);
+  -webkit-animation: horizon_anime $speed ease-out;}
+
+@mixin vertical($coler,$left,$width,$speed,$delay) {
+  @include background_line_template($coler,$delay,$width,100%,$left,0);
+  -webkit-animation: vertical_anime $speed ease-out;
+}
+
+@-webkit-keyframes horizon_anime {
+  0% {width: 0%;}
+  100% {width: 100%;}
+}
+@-webkit-keyframes vertical_anime {
+  0% {height: 0%;}
+  100% {height: 100%;}
+}
+
+.line_{
+  &horizon{
+    &1{
+      @include horizon(#faa622,100px,15px,0.7s,0.6s);
+    }
+    &2{
+      @include horizon(#ffe52c,80px,20px,0.5s,0.2s);
+    }
+    &3{
+      @include horizon(#7fe6ef,73px,8px,0.6s,0.5s);
+    }
+    &4{
+      @include horizon(#c4d70c,61px,12px,0.8s,0.8s);
+    }
+    &5{
+      @include horizon(#c22303,53px,8px,1s,0.6s);
+    }
+  }
+  &vertical{
+    &1{
+      @include vertical(#faa622,150px,15px,0.7s,0.6s);
+    }
+    &2{
+      @include vertical(#ffe52c,130px,20px,0.5s,0.2s);
+    }
+    &3{
+      @include vertical(#7fe6ef,123px,8px,0.6s,0.5s);
+    }
+    &4{
+      @include vertical(#c4d70c,111px,12px,0.8s,0.8s);
+    }
+    &5{
+      @include vertical(#c22303,103px,8px,1s,0.6s);
+    }
+  }
+}
