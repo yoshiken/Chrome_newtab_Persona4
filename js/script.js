@@ -41,8 +41,13 @@ aElement.onclick = function() {
 
 var aElement = document.getElementById("history");
 aElement.onclick = function() {
-
-    document.getElementById("js").innerHTML = "<p id="+"content"+">history</p>";
+  var query = {
+  text: ''
+};
+  chrome.history.search(query, function (results) {
+      document.getElementById("js").innerHTML = results[]['title']
+    console.table(results);
+  });
 }
 
 var aElement = document.getElementById("closetab");
