@@ -142,6 +142,22 @@
     -webkit-transform: translateY(-10px); }
   100% {
     -webkit-transform: translateY(5px); } }
+.menu_text a:link {
+  color: #000;
+  text-decoration: none; }
+
+.menu_text a:visited {
+  color: #000;
+  text-decoration: none; }
+
+.menu_text a:hover {
+  color: #000;
+  text-decoration: none; }
+
+.menu_text a:active {
+  color: #000;
+  text-decoration: none; }
+
 .upper_right1 {
   display: block;
   width: 130px;
@@ -201,24 +217,9 @@ html {
   position: relative;
   background-color: #ff0; }
 
-a:link {
-  color: #000;
-  text-decoration: none; }
-
-a:visited {
-  color: #000;
-  text-decoration: none; }
-
-a:hover {
-  color: #000;
-  text-decoration: none; }
-
-a:active {
-  color: #000;
-  text-decoration: none; }
-
 .main {
   display: block;
+  overflow: scroll;
   background-color: #eee;
   height: 700px;
   width: 1150px;
