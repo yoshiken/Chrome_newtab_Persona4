@@ -21,8 +21,12 @@ html
   overflow: scroll;
   background-color: #eee;
   height: 700px;
-  width: 1150px;
+  width: 1300px;
   position: fixed;
   left: 400px;
   top: 100px;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
 }
