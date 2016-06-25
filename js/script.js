@@ -54,7 +54,7 @@ function history_loop(ary) {
 
 var aElement = document.getElementById("bookmark");
 aElement.onclick = function() {
-      document.getElementById("js").innerHTML = "<p id=" + "content" + "> /p>";
+      document.getElementById("js").innerHTML = "<p id=" + "content" + "> </p>";
     //BookmarkAPI呼び出してbookmarks_loopに投げる
     chrome.bookmarks.getTree(function(bookmark) {
         var bookmark_toolbar = bookmark[0]['children'];
@@ -67,7 +67,7 @@ aElement.onclick = function() {
 
 var aElement = document.getElementById("history");
 aElement.onclick = function() {
-  document.getElementById("js").innerHTML = "<p id=" + "content" + "> /p>";
+  document.getElementById("js").innerHTML = "<p id=" + "content" + "></p>";
     var query = {
         text: ''
     };
@@ -80,17 +80,17 @@ aElement.onclick = function() {
 var aElement = document.getElementById("closetab");
 aElement.onclick = function() {
 
-    document.getElementById("js").innerHTML = "<p id=" + "content" + ">Close tab</p>";
+    document.getElementById("js").innerHTML = "<p id=" + "content" + ">Sorry unimplemented</p>";
 }
 
 var aElement = document.getElementById("myapp");
 aElement.onclick = function() {
 
-    document.getElementById("js").innerHTML = "<p id=" + "content" + ">My App</p>";
+    document.getElementById("js").innerHTML = "<p id=" + "content" + ">Sorry unimplemented</p>";
 }
 
 var aElement = document.getElementById("setting");
 aElement.onclick = function() {
 
-    document.getElementById("js").innerHTML = "<p id=" + "content" + ">Setting</p>";
+    document.getElementById("js").innerHTML = "<p id=" + "content" + ">Sorry unimplemented</p>";
 }
