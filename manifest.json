@@ -16,6 +16,6 @@
    "newtab": "index.html"
  },
 "permissions": [
-  "bookmarks", "history"
+  "bookmarks", "history","storage","unlimitedStorage"
 ]
 }

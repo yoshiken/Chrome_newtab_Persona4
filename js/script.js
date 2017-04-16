@@ -27,38 +27,14 @@ function bookmarks_loop(ary) {
 }
 
 
-function history_loop(ary) {
-    ary.forEach(function(v, i) {
-        //sp1にhistory_anchorとhrefを挿入
-        var sp1 = document.createElement("a");
-        sp1.setAttribute("class", "history_anchor");
-        sp1.setAttribute("href", v['url']);
-        var sp1_content = document.createTextNode(v['title']);
-        sp1.appendChild(sp1_content);
-        //sp2にcontent属性を挿入
-        var sp2 = document.getElementById("content");
-        var parentDiv = sp2.parentNode;
-        //favicon取得
-        var favget = "http://www.google.com/s2/favicons?domain=" + v['url'];
-        var favicon = document.createElement("img");
-        favicon.setAttribute("src", favget);
-        //挿入開始
-        parentDiv.insertBefore(favicon, sp2);
-        parentDiv.insertBefore(sp1, sp2);
-    });
-}
-
-
-
-
 
 var aElement = document.getElementById("bookmark");
 aElement.onclick = function() {
-      document.getElementById("js").innerHTML = "<p id=" + "content" + "> /p>";
+      document.getElementById("content_frame").innerHTML = "<p id=" + "content" + "></p>";
     //BookmarkAPI呼び出してbookmarks_loopに投げる
     chrome.bookmarks.getTree(function(bookmark) {
         var bookmark_toolbar = bookmark[0]['children'];
-        console.log(bookmark_toolbar[0]['children']);
+        //console.log(bookmark_toolbar[0]['children']);
         bookmarks_loop(bookmark_toolbar[0]['children']);
     });
 
@@ -67,30 +43,24 @@ aElement.onclick = function() {
 
 var aElement = document.getElementById("history");
 aElement.onclick = function() {
-  document.getElementById("js").innerHTML = "<p id=" + "content" + "> /p>";
+  document.getElementById("content_frame").innerHTML = "<p id=" + "content" + "></p>";
     var query = {
         text: ''
     };
     chrome.history.search(query, function(results) {
-        console.table(results);
+        //console.table(results);
         bookmarks_loop(results);
     });
 }
 
-var aElement = document.getElementById("closetab");
-aElement.onclick = function() {
 
-    document.getElementById("js").innerHTML = "<p id=" + "content" + ">Close tab</p>";
+function Sorry_unimplemented(id_name){
+  var aElement = document.getElementById(id_name).onclick = function() {
+  
+      document.getElementById("content_frame").innerHTML = "<p id=" + "content" + ">Sorry unimplemented</p>";
+  }
 }
 
-var aElement = document.getElementById("myapp");
-aElement.onclick = function() {
-
-    document.getElementById("js").innerHTML = "<p id=" + "content" + ">My App</p>";
-}
-
-var aElement = document.getElementById("setting");
-aElement.onclick = function() {
-
-    document.getElementById("js").innerHTML = "<p id=" + "content" + ">Setting</p>";
-}
+Sorry_unimplemented("closetab");
+Sorry_unimplemented("myapp");
+Sorry_unimplemented("setting");

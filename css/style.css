@@ -220,14 +220,15 @@ html {
 .main {
   display: block;
   overflow: scroll;
-  background-color: #eee;
-  height: 700px;
-  width: 1300px;
   position: fixed;
-  left: 400px;
-  top: 100px; }
+  left: 500px;
+  height: 80%;
+  margin-top: 50px; }
 
 .main::-webkit-scrollbar {
   display: none; }
+
+.p4tv {
+  width: 900px; }
 
 /*# sourceMappingURL=style.css.map */
